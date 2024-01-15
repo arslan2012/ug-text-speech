@@ -11,9 +11,11 @@
 # next.js
 /.next/
 /out/
+*.wav
 
 # production
 /build
+/sound_files
 
 # misc
 .DS_Store
