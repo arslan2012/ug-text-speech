@@ -56,12 +56,11 @@ export default function Home() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const converter = new UgScriptConverter();
 
     // Submit the text to the API and receive the WAV file
     const response = await fetch('/api/t2s', {
       method: 'POST',
-      body: JSON.stringify(converter.run(text)),
+      body: JSON.stringify(UgScriptConverter(text)),
       headers: {
         'Content-Type': 'application/json',
       },
