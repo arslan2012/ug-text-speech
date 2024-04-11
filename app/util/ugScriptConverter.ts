@@ -219,25 +219,22 @@ export class UgScriptConverter {
     private convertULS2CTS(text: string): string {
         const replacements = {
             'ng': 'ñ',
-            'ə': 'e',
-            'ⱬ': 'j',
-            'j': 'c',
-            'ⱪ': 'q',
-            'q': 'ç',
-            'ⱨ': 'h',
-            'h': 'x',
-            'x': 'ş',
-            'ø': 'ö',
+            'n\'g': 'ng',
+            '\'ng': 'ñ',
+            'ch': 'ç',
+            'zh': 'j',
+            'sh': 'ş',
             'w': 'v',
             'e': 'é',
-            'ƣ': 'ğ'
+            '\'gh': 'ğ',
+            'gh': 'ğ'
         };
         return this.convert(text, replacements);
     }
     
     private convertUYS2CTS(text: string): string {
         const replacements = {
-            "n'g": 'ñ',
+            "ng": 'ñ',
             'ə': 'e',
             'ⱬ': 'j',
             'j': 'c',
