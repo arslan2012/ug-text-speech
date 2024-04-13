@@ -120,20 +120,21 @@ export const UgScriptConverter = (text: string, source_script = 'ULS', target_sc
 
 const replacementsMaps = {
   'ULS': {
-    'ñ': 'ng',
-    'e': 'ə',
-    'j': 'ⱬ',
+    'ng': "n'g",
+    'sh': "s'h",
+    'ch': "c'h",
+    'zh': "z'h",
+    'gh': "g'h",
+    'nğ': "n'gh",
+    'ñ': "ng",
+    'j': 'zh',
     'c': 'j',
-    'q': 'ⱪ',
-    'ç': 'q',
-    'h': 'ⱨ',
-    'x': 'h',
-    'ş': 'x',
-    'ö': 'ø',
+    'ç': 'ch',
+    'ş': 'sh',
+    'ğ': "gh",
     'v': 'w',
-    'é': 'e',
-    'ğ': 'ƣ'
-  }, 'UYS': {
+  },
+  'UYS': {
     'ñ': "n'g",
     'e': 'ə',
     'j': 'ⱬ',
@@ -147,20 +148,16 @@ const replacementsMaps = {
     'v': 'w',
     'é': 'e',
     'ğ': 'ƣ'
-  }, 'UZBEK': {
-    'ñ': 'ng',
-    'e': 'e',
-    'j': 'j',
-    'c': 'c',
-    'q': 'q',
-    'ç': 'ç',
-    'h': 'h',
-    'x': 'x',
-    'ş': 'ş',
-    'ö': 'ö',
-    'v': 'v',
-    'é': 'é',
-    'ğ': 'ğ'
+  },
+  'UZBEK': {
+    'ñ': "ng",
+    'e': 'a',
+    'c': 'j',
+    'ç': 'ch',
+    'ş': 'sh',
+    'ö': 'oʻ',
+    'é': 'e',
+    'ğ': 'gʻ'
   }
 } as const;
 
